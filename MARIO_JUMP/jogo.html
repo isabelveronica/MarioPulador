@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="js/script.js" defer></script>
+    <link href="./images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <title>Mário Pulador</title>
+  </head>
+
+  <body>
+    <div class="game-board">
+      <h1>Mario Pulador</h1>
+
+      /*
+      <h2>Score: <span id="score"></span></h2>
+      */
+
+      <img src="./images/clouds.png" class="clouds" />
+      <img src="./images/mario.gif" class="mario" />
+      <img src="./images/planta.png" class="planta" />
+    </div>
+
+    <div class="audioplayer">
+      <audio autoplay="autoplay" controls="controls" loop>
+        <source src="./sounds/Mario_Overworld.mp3" type="audio/mp3" />
+        Seu navegador não suporta HTML5!
+      </audio>
+
+      <div class="game-over">
+        <button class="restart">REINICIAR</button>
+      </div>
+    </div>
+  </body>
+</html>

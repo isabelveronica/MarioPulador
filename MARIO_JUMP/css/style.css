@@ -1,0 +1,197 @@
+@import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+h1 {
+  color: #0c3772;
+  margin-top: 15px;
+  margin-left: 200px;
+  text-align: left;
+  font-family: 'New Super Mario Font U', sans-serif;
+}
+
+h2 {
+  color: rgb(221, 197, 43);
+  font-family: 'New Super Mario Font U', sans-serif;
+  text-align: left;
+  margin-left: 100px;
+  animation: piscar 1.5s infinite;
+}
+
+h3 {
+  color: rgb(107, 9, 9);
+  font-family: 'New Super Mario Font U', sans-serif;
+  text-align: center;
+  animation: piscar 1s infinite;
+}
+
+.telaAbertura {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  overflow: hidden;
+  background-color: linear-gradient(rgb(81, 223, 238), rgb(205, 241, 242));
+}
+
+.game-start {
+  position: absolute;
+  width: 1200px;
+  max-width: 800px;
+  background-color: linear-gradient(rgb(81, 223, 238), rgb(205, 241, 242));
+}
+
+.game-start img {
+  width: 100%;
+  height: 600px;
+}
+
+.game-start .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: linear-gradient(rgb(81, 223, 238), rgb(205, 241, 242));
+  color: rgb(126, 5, 5);
+  font-family: 'New Super Mario Font U', sans-serif;
+  font-size: 30px;
+  padding: 20px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.game-start .btn:hover {
+  background-color: rgb(6, 13, 132);
+  color: white;
+}
+
+.game-board {
+  width: 100%;
+  height: 600px;
+  border-bottom: 30px solid rgb(39, 114, 39);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgb(81, 223, 238), rgb(205, 241, 242));
+}
+
+.planta {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: planta-animation 1.5s infinite linear;
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  position: absolute;
+  width: 400px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+.game-over {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.restart {
+  height: 60px;
+  width: 350px;
+  border-radius: 10px;
+  font-family: ;
+  font-size: 20px;
+  background-color: rgb(226, 229, 68);
+  cursor: pointer;
+}
+
+@keyframes planta-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 100%;
+  }
+
+  @media (max-width: 620px) {
+    .mario {
+      width: 130px;
+      position: absolute;
+      bottom: 0px;
+    }
+    .planta {
+      position: absolute;
+      bottom: 0;
+      width: 70px;
+      animation: planta-animation 1.5s infinite linear;
+    }
+  }
+
+  #score {
+    color: #10d1ff;
+  }
+  @keyframes piscar {
+    50% {
+      color: rgb(103, 5, 5);
+    }
+    100% {
+      color: rgb(84, 19, 196);
+    }
+  }
+}
